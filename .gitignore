@@ -19,3 +19,10 @@ cmake_install.cmake
 
 # logs
 *.log
+
+# Ignore Qt project files
+*.pro
+*.pri
+
+# Ignore resource files
+*.qrc
