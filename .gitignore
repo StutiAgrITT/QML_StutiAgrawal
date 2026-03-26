@@ -1,0 +1,21 @@
+# Ignore all Qt build folders
+build*/
+
+# Qt Creator files
+*.pro.user
+*.pro.user.*
+*.user
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# binaries
+*.o
+*.obj
+*.exe
+*.out
+
+# logs
+*.log
