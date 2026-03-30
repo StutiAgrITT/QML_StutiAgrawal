@@ -1,0 +1,11 @@
+import QtQuick 2.12
+
+Rectangle {
+    color: "blue"
+    anchors.fill: parent
+
+    Text {
+        text: "PROFILE"
+        anchors.centerIn: parent
+    }
+}
