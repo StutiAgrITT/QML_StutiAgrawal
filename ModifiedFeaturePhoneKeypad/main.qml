@@ -12,6 +12,34 @@ Window {
     property string layoutMode: "alpha"
     property bool isKeypadVisible: false
 
+    property var alphaKeys:[
+        { label: "abc", type: "alpha" },
+        { label: "def", type: "alpha" },
+        { label: "ghi", type: "alpha" },
+        { label: "Backspace", type: "control", action: "backspace" },
+
+        { label: "jkl", type: "alpha" },
+        { label: "mno", type: "alpha" },
+        { label: "pqrs", type: "alpha" },
+        { label: "Shift", type: "control", action: "shift" },
+
+        { label: "tuv", type: "alpha" },
+        { label: "wxyz", type: "alpha" },
+        { label: ",", type: "char" },
+        { label: "Enter", type: "control", action: "enter" },
+
+        { label: "?", type: "char" },
+        { label: ".", type: "char" },
+        { label: "123", type: "layout", action: "toNumeric" },
+        { label: "!@#", type: "layout", action: "toSpecial" },
+
+        { label: "Space", type: "control", action: "space", span: 4 },
+
+        { label: "<-", type: "navigation", action: "left" },
+        { label: "->", type: "navigation", action: "right" },
+        { label: "Dismiss", type: "control", action: "dismiss", span: 2 },
+    ]
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 10
@@ -44,10 +72,33 @@ Window {
             color: "lightgray"
             visible: isKeypadVisible
 
-            Text {
-                anchors.centerIn: parent
-                text: "keypad area"
+            GridLayout {
+                anchors.fill: parent
+                columns: 4
+                columnSpacing: 6
+                rowSpacing: 6
+
+                Repeater {
+                    model: alphaKeys
+
+                    delegate: KeyButton {
+                        label: modelData.label
+                        keyType: modelData.type
+
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 50
+                        Layout.columnSpan: modelData.span ? modelData.span : 1
+
+                        onKeyPressed: {
+                            handleKey(label, keyType, modelData.action)
+                        }
+                    }
+                }
             }
         }
+    }
+
+    function handleKey(label, type, action) {
+        console.log("Pressed:", label, type, action)
     }
 }
