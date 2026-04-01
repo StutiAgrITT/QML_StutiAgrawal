@@ -10,7 +10,7 @@ Window {
     title: qsTr("KeyPad")
 
     property string layoutMode: "alpha"
-    property bool isKeypadVisible: false
+    property bool isKeypadVisible: true
 
     property var alphaKeys:[
         { label: "abc", type: "alpha" },
@@ -99,6 +99,55 @@ Window {
     }
 
     function handleKey(label, type, action) {
-        console.log("Pressed:", label, type, action)
+        if (type === "char") {
+            insertChar(label)
+        }
+        else if (type === "alpha") {
+            insertChar(label[0]) // temporary
+        }
+
+        else if (action === "backspace") {
+            deleteChar()
+        }
+
+        else if (action === "enter") {
+            insertChar("\n")
+        }
+
+        else if (action === "space") {
+            insertChar(" ")
+        }
+
+        else if (action === "left") {
+            moveLeft()
+        }
+
+        else if (action === "right") {
+            moveRight()
+        }
+
+        else if (action === "dismiss") {
+            isKeypadVisible = false
+        }
+    }
+
+    function insertChar(ch) {
+        inputBox.insert(inputBox.cursorPosition, ch)
+    }
+
+    function deleteChar() {
+        if (inputBox.cursorPosition > 0) {
+            inputBox.remove(inputBox.cursorPosition - 1, inputBox.cursorPosition)
+        }
+    }
+
+    function moveLeft() {
+        if (inputBox.cursorPosition > 0)
+            inputBox.cursorPosition--
+    }
+
+    function moveRight() {
+        if (inputBox.cursorPosition < inputBox.length)
+            inputBox.cursorPosition++
     }
 }
