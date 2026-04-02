@@ -9,7 +9,15 @@ Button {
 
     signal keyPressed(string label, string keyType)
 
-    text: label
+    contentItem: Text {
+        text: root.label
+        anchors.centerIn: parent
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+
+        textFormat: Text.PlainText
+        color: "black"
+    }
 
     onClicked:{
         keyPressed(label, keyType)
