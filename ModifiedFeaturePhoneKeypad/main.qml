@@ -40,6 +40,41 @@ Window {
         { label: "Dismiss", type: "control", action: "dismiss", span: 2 },
     ]
 
+    property var popupLetters: []
+
+    Popup {
+        id: letterPopup
+        modal: true
+        focus: true
+        //x: (parent.width - width) / 2
+        y: parent.height - 200
+
+        width: parent.width
+        height: 80
+
+        background: Rectangle {
+            color: "white"
+           border.color: "gray"
+        }
+
+        RowLayout {
+            anchors.centerIn: parent
+            spacing: 10
+
+            Repeater {
+                model: popupLetters
+                delegate: Button {
+                    text: modelData
+
+                    onClicked: {
+                        insertChar(modelData)
+                        letterPopup.close()
+                    }
+                }
+            }
+        }
+    }
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 10
@@ -103,7 +138,7 @@ Window {
             insertChar(label)
         }
         else if (type === "alpha") {
-            insertChar(label[0]) // temporary
+            openPopup(label)
         }
 
         else if (action === "backspace") {
@@ -149,5 +184,10 @@ Window {
     function moveRight() {
         if (inputBox.cursorPosition < inputBox.length)
             inputBox.cursorPosition++
+    }
+
+    function openPopup(label) {
+        popupLetters = label.split("")
+        letterPopup.open()
     }
 }
