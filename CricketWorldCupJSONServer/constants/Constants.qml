@@ -3,29 +3,24 @@ import QtQuick 2.12
 
 QtObject {
 
-    // ── Window ────────────────────────────────────────────────────
     readonly property int windowWidth: 460
     readonly property int windowHeight: 760
     readonly property int windowMinWidth: 300
     readonly property int windowMinHeight: 400
     readonly property string windowTitle: "Cricket World Cup Teams"
 
-    // ── API ───────────────────────────────────────────────────────
     readonly property string apiBase: "http://localhost:3000"
     readonly property string apiTeams: "/teams"
 
-    // ── Spacing ───────────────────────────────────────────────────
     readonly property int spaceXs: 4
     readonly property int spaceS: 8
     readonly property int spaceM: 14
     readonly property int spaceL: 20
 
-    // ── Radius ────────────────────────────────────────────────────
     readonly property int radiusS: 6
     readonly property int radiusM: 12
     readonly property int radiusL: 20
 
-    // ── Sizing ────────────────────────────────────────────────────
     readonly property int headerHeight: 64
     readonly property int footerHeight: 58
     readonly property int cardHeight: 88
@@ -68,7 +63,6 @@ QtObject {
     readonly property int themeToggleRadius: 20
     readonly property int headerIconSize: 28
 
-    // ── Font sizes ────────────────────────────────────────────────
     readonly property int fontS: 11
     readonly property int fontM: 13
     readonly property int fontL: 15
@@ -78,7 +72,6 @@ QtObject {
     readonly property int fontEmoji: 48
     readonly property int fontWarn: 40
 
-    // ── Colours ───────────────────────────────────────────────────
     readonly property color colBgLight: "whitesmoke"
     readonly property color colBgDark: "black"
     readonly property color colSurfaceLight: "white"
@@ -98,23 +91,19 @@ QtObject {
     readonly property color colBorder: "lightgray"
     readonly property color colOverlay: "transparent"
 
-    // ── Strings: header ───────────────────────────────────────────
     readonly property string headerTitle: "Cricket World Cup"
     readonly property string headerSubtitle: "ICC : All Teams"
     readonly property string themeIconLight: "🌞"
     readonly property string themeIconDark: "🌙"
 
-    // ── Strings: footer ───────────────────────────────────────────
     readonly property string btnRefresh: "↺  Refresh"
     readonly property string btnAdd: "+  Add Team"
 
-    // ── Strings: card ─────────────────────────────────────────────
     readonly property string labelCaptain: "Captain: "
     readonly property string labelWins: "🏆 "
     readonly property string labelWinsSuffix: " WC Win"
     readonly property string labelWinsSuffixP: " WC Wins"
 
-    // ── Strings: popup ────────────────────────────────────────────
     readonly property string labelCode: "Code: "
     readonly property string labelCaptainFull: "Captain"
     readonly property string labelWinsFull: "WC Wins"
@@ -123,7 +112,6 @@ QtObject {
     readonly property string btnDeleteFull: "🗑  Delete Team"
     readonly property string linkLabel: "Official ICC Profile  ↗"
 
-    // ── Strings: add dialog ───────────────────────────────────────
     readonly property string dialogTitle: "Add New Team"
     readonly property string fieldName: "Team Name *"
     readonly property string fieldShortName: "Short Name (e.g. IND) *"
@@ -136,7 +124,6 @@ QtObject {
     readonly property string btnCancel: "Cancel"
     readonly property string validationError: "Please fill all required fields (*)"
 
-    // ── Strings: states ───────────────────────────────────────────
     readonly property string stateLoading: "Loading teams..."
     readonly property string stateEmpty: "No teams found. Try refreshing."
     readonly property string stateError: "⚠️"
