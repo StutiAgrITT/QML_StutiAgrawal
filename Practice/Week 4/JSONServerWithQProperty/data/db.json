@@ -1,0 +1,112 @@
+{
+  "teams": [
+    {
+      "id": "1",
+      "name": "India",
+      "shortName": "IND",
+      "captain": "Rohit Sharma",
+      "worldCupWins": 2,
+      "logoUrl": "qrc:/images/ind.png",
+      "keyPlayers": [
+        "Virat Kohli",
+        "Jasprit Bumrah",
+        "Hardik Pandya"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/india"
+    },
+    {
+      "id": "2",
+      "name": "Australia",
+      "shortName": "AUS",
+      "captain": "Pat Cummins",
+      "worldCupWins": 6,
+      "logoUrl": "qrc:/images/aus.png",
+      "keyPlayers": [
+        "David Warner",
+        "Steve Smith",
+        "Mitchell Starc"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/australia"
+    },
+    {
+      "id": "3",
+      "name": "England",
+      "shortName": "ENG",
+      "captain": "Jos Buttler",
+      "worldCupWins": 1,
+      "logoUrl": "qrc:/images/eng.png",
+      "keyPlayers": [
+        "Ben Stokes",
+        "Joe Root",
+        "Jofra Archer"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/england"
+    },
+    {
+      "id": "4",
+      "name": "Pakistan",
+      "shortName": "PAK",
+      "captain": "Babar Azam",
+      "worldCupWins": 1,
+      "logoUrl": "qrc:/images/pak.png",
+      "keyPlayers": [
+        "Shaheen Afridi",
+        "Mohammad Rizwan",
+        "Fakhar Zaman"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/pakistan"
+    },
+    {
+      "id": "5",
+      "name": "New Zealand",
+      "shortName": "NZ",
+      "captain": "Kane Williamson",
+      "worldCupWins": 0,
+      "logoUrl": "qrc:/images/nz.png",
+      "keyPlayers": [
+        "Trent Boult",
+        "Devon Conway"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/new-zealand"
+    },
+    {
+      "id": "6",
+      "name": "South Africa",
+      "shortName": "SA",
+      "captain": "Temba Bavuma",
+      "worldCupWins": 0,
+      "logoUrl": "qrc:/images/sa.png",
+      "keyPlayers": [
+        "Kagiso Rabada",
+        "Quinton de Kock",
+        "Aiden Markram",
+        "Lungi Ngidi"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/south-africa"
+    },
+    {
+      "id": "7",
+      "name": "West Indies",
+      "shortName": "WI",
+      "captain": "Shai Hope",
+      "worldCupWins": 2,
+      "logoUrl": "qrc:/images/wi.png",
+      "keyPlayers": [
+        "Nicholas Pooran",
+        "Jason Holder"
+      ],
+      "profileLink": "https://www.icc-cricket.com/teams/west-indies"
+    },
+    {
+      "captain": "me",
+      "keyPlayers": [],
+      "logoUrl": "",
+      "name": "abcdef",
+      "profileLink": "",
+      "shortName": "ABC",
+      "worldCupWins": 3,
+      "id": "BIFY_pA1X9g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
